@@ -1,0 +1,156 @@
+.dest-main {
+  min-height: 100vh;
+  height: auto;
+  overflow: hidden;
+  padding: 6rem 0 1rem;
+}
+
+.planets-flex {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+
+  .font-changed {
+    margin-bottom: 1rem;
+    span {
+      color: $number-clr;
+      font-family: inherit;
+      font-weight: 900;
+    }
+  }
+}
+.planet-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.planet-info {
+  border-top: 1px solid $number-clr;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+
+  .big {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+}
+
+.planet {
+  display: none;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  .planet-img {
+    img {
+      width: 60%;
+    }
+  }
+}
+
+.planet-nav {
+  display: flex;
+  justify-content: space-evenly;
+
+  li {
+    @extend .font-changed;
+    font-size: 1.25rem;
+    position: relative;
+    transition: $t1;
+    margin-bottom: 0 !important;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 0;
+      background: #fff;
+      opacity: 0;
+      width: 90%;
+      position: absolute;
+      left: 50%;
+      bottom: -5px;
+      transform: translateX(-50%);
+      transition: inherit;
+    }
+
+    &:not(.active-planet):hover {
+      &::after {
+        opacity: 0.7;
+        height: 2px;
+      }
+    }
+  }
+
+  .active-planet {
+    color: #fff;
+
+    &::after {
+      opacity: 1;
+      height: 2px;
+    }
+  }
+}
+
+.moon {
+  display: flex;
+}
+
+@media (min-width: 550px) {
+  .planets-flex {
+    > .font-changed {
+      text-align: left;
+    }
+  }
+  .planet-info {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 768px) {
+  .dest-main {
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .planets-flex {
+    text-align: left;
+    .planet {
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .planet-img {
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
+  .planet-text {
+    gap: 1rem;
+    h2 {
+      //margin-bottom: -1rem;
+    }
+  }
+
+  .planet-nav {
+    justify-content: flex-start;
+    gap: 2vw;
+  }
+
+  .planet-info {
+    padding: 1.5rem 0;
+    .big {
+      font-size: 2rem;
+    }
+    .small {
+      font-size: 1rem;
+    }
+  }
+}

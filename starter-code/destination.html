@@ -1,0 +1,225 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/shared/logo.svg"
+    />
+    <link rel="stylesheet" href="./app/css,scss/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Destination</title>
+  </head>
+  <body>
+    <main class="dest-main">
+      <img
+        src="./assets/destination/background-destination-mobile.jpg"
+        alt=""
+        class="mobile-bgimg"
+      />
+      <img
+        src="./assets/destination/background-destination-tablet.jpg"
+        alt=""
+        class="tablet-bgimg"
+      />
+      <img
+        src="./assets/destination/background-destination-desktop.jpg"
+        alt=""
+        class="desktop-bgimg"
+      />
+
+      <div class="nav-container">
+        <div class="mobile-menu">
+          <ul>
+            <li>
+              <a href="./index.html"><span>00</span> HOME</a>
+            </li>
+            <li>
+              <a href="./destination.html" class="active-mob-nav"
+                ><span>01</span> DESTINATION</a
+              >
+            </li>
+            <li>
+              <a href="./crew.html"><span>02</span> CREW</a>
+            </li>
+            <li>
+              <a href="./technology.html"><span>03</span> TECHNOLOGY</a>
+            </li>
+          </ul>
+        </div>
+        <nav class="navbar">
+          <img src="./assets/shared/logo.svg" alt="logo" id="logo" />
+          <ul class="navlist">
+            <li class="nav-item">
+              <a href="./index.html"><span>00</span> HOME</a>
+            </li>
+            <li class="nav-item">
+              <a href="./destination.html" class="active-nav"
+                ><span>01</span> DESTINATION</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="./crew.html"><span>02</span> CREW</a>
+            </li>
+            <li class="nav-item">
+              <a href="./technology.html"><span>03</span> TECHNOLOGY</a>
+            </li>
+            <li class="nav-item burger-menu">
+              <img
+                src="./assets/shared/icon-hamburger.svg"
+                class="open"
+                alt=""
+              />
+              <img src="./assets/shared/icon-close.svg" class="close" alt="" />
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="planets-flex">
+        <h4 class="font-changed"><span>00</span> PICK YOUR DESTINATION</h4>
+        <div class="planet moon">
+          <div class="planet-img">
+            <img src="./assets/destination/image-moon.png" alt="" />
+          </div>
+          <div class="planet-text">
+            <ul class="planet-nav">
+              <li data-show="moon" class="planet-btn active-planet">MOON</li>
+              <li data-show="mars" class="planet-btn">MARS</li>
+              <li data-show="europa" class="planet-btn">EUROPA</li>
+              <li data-show="titan" class="planet-btn">TITAN</li>
+            </ul>
+            <h2 class="planet-name">MOON</h2>
+            <p>
+              See our planet as you’ve never seen it before. A perfect relaxing
+              trip away to help regain perspective and come back refreshed.
+              While you’re there, take in some history by visiting the Luna 2
+              and Apollo 11 landing sites.
+            </p>
+            <div class="planet-info">
+              <div class="distance">
+                <h5 class="small font-changed">AVG. DISTANCE</h5>
+                <h3 class="big">384,400 KM</h3>
+              </div>
+
+              <div class="t-time">
+                <h5 class="small font-changed">EST. TRAVEL TIME</h5>
+                <h3 class="big">3 DAYS</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="planet mars">
+          <div class="planet-img">
+            <img src="./assets/destination/image-mars.png" alt="" />
+          </div>
+          <div class="planet-text">
+            <ul class="planet-nav">
+              <li data-show="moon" class="planet-btn">MOON</li>
+              <li data-show="mars" class="planet-btn active-planet">MARS</li>
+              <li data-show="europa" class="planet-btn">EUROPA</li>
+              <li data-show="titan" class="planet-btn">TITAN</li>
+            </ul>
+            <h2 class="planet-name">MARS</h2>
+            <p>
+              Don’t forget to pack your hiking boots. You’ll need them to tackle
+              Olympus Mons, the tallest planetary mountain in our solar system.
+              It’s two and a half times the size of Everest!
+            </p>
+            <div class="planet-info">
+              <div class="distance">
+                <h5 class="small font-changed">AVG. DISTANCE</h5>
+                <h3 class="big">225 mil. km</h3>
+              </div>
+
+              <div class="t-time">
+                <h5 class="small font-changed">EST. TRAVEL TIME</h5>
+                <h3 class="big">9 months</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="planet europa">
+          <div class="planet-img">
+            <img src="./assets/destination/image-europa.png" alt="" />
+          </div>
+          <div class="planet-text">
+            <ul class="planet-nav">
+              <li data-show="moon" class="planet-btn">MOON</li>
+              <li data-show="mars" class="planet-btn">MARS</li>
+              <li data-show="europa" class="planet-btn active-planet">
+                EUROPA
+              </li>
+              <li data-show="titan" class="planet-btn">TITAN</li>
+            </ul>
+            <h2 class="planet-name">EUROPA</h2>
+            <p>
+              The smallest of the four Galilean moons orbiting Jupiter, Europa
+              is a winter lover’s dream. With an icy surface, it’s perfect for a
+              bit of ice skating, curling, hockey, or simple relaxation in your
+              snug wintery cabin.
+            </p>
+            <div class="planet-info">
+              <div class="distance">
+                <h5 class="small font-changed">AVG. DISTANCE</h5>
+                <h3 class="big">628 mil. km</h3>
+              </div>
+
+              <div class="t-time">
+                <h5 class="small font-changed">EST. TRAVEL TIME</h5>
+                <h3 class="big">3 years</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="planet titan">
+          <div class="planet-img">
+            <img src="./assets/destination/image-titan.png" alt="" />
+          </div>
+          <div class="planet-text">
+            <ul class="planet-nav">
+              <li data-show="moon" class="planet-btn">MOON</li>
+              <li data-show="mars" class="planet-btn">MARS</li>
+              <li data-show="europa" class="planet-btn">EUROPA</li>
+              <li data-show="titan" class="planet-btn active-planet">TITAN</li>
+            </ul>
+            <h2 class="planet-name">TITAN</h2>
+            <p>
+              The only moon known to have a dense atmosphere other than Earth,
+              Titan is a home away from home (just a few hundred degrees
+              colder!). As a bonus, you get striking views of the Rings of
+              Saturn.
+            </p>
+            <div class="planet-info">
+              <div class="distance">
+                <h5 class="small font-changed">AVG. DISTANCE</h5>
+                <h3 class="big">1.6 bil. km</h3>
+              </div>
+
+              <div class="t-time">
+                <h5 class="small font-changed">EST. TRAVEL TIME</h5>
+                <h3 class="big">7 years</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./app/js/script.js"></script>
+    <script src="./app/js/dest.js"></script>
+  </body>
+</html>

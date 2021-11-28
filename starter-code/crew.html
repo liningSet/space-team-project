@@ -1,0 +1,192 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/shared/logo.svg"
+    />
+    <link rel="stylesheet" href="./app/css,scss/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Crew</title>
+  </head>
+  <body>
+    <main class="crew-main">
+      <img
+        src="./assets/crew/background-crew-mobile.jpg"
+        alt=""
+        class="mobile-bgimg"
+      />
+      <img
+        src="./assets/crew/background-crew-tablet.jpg"
+        alt=""
+        class="tablet-bgimg"
+      />
+      <img
+        src="./assets/crew/background-crew-desktop.jpg"
+        alt=""
+        class="desktop-bgimg"
+      />
+
+      <div class="nav-container">
+        <div class="mobile-menu">
+          <ul>
+            <li>
+              <a href="./index.html"><span>00</span> HOME</a>
+            </li>
+            <li>
+              <a href="./destination.html"><span>01</span> DESTINATION</a>
+            </li>
+            <li>
+              <a href="./crew.html" class="active-mob-nav"
+                ><span>02</span> CREW</a
+              >
+            </li>
+            <li>
+              <a href="./technology.html"><span>03</span> TECHNOLOGY</a>
+            </li>
+          </ul>
+        </div>
+        <nav class="navbar">
+          <img src="./assets/shared/logo.svg" alt="logo" id="logo" />
+          <ul class="navlist">
+            <li class="nav-item">
+              <a href="./index.html"><span>00</span> HOME</a>
+            </li>
+            <li class="nav-item">
+              <a href="./destination.html"><span>01</span> DESTINATION</a>
+            </li>
+            <li class="nav-item">
+              <a href="./crew.html" class="active-nav"><span>02</span> CREW</a>
+            </li>
+            <li class="nav-item">
+              <a href="./technology.html"><span>03</span> TECHNOLOGY</a>
+            </li>
+            <li class="nav-item burger-menu">
+              <img
+                src="./assets/shared/icon-hamburger.svg"
+                class="open"
+                alt=""
+              />
+              <img src="./assets/shared/icon-close.svg" class="close" alt="" />
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <h4 class="font-changed"><span>01</span> MEET YOUR CREW</h4>
+      <div class="crew-members">
+        <div class="member commander">
+          <div class="member-text">
+            <div class="member-text-inner">
+              <h5>COMMANDER</h5>
+              <h3>DOUGLAS HURLEY</h3>
+              <p>
+                Douglas Gerald Hurley is an American engineer, former Marine
+                Corps pilot and former NASA astronaut. He launched into space
+                for the third time as commander of Crew Dragon Demo-2.
+              </p>
+            </div>
+            <div class="crew-nav">
+              <div class="nav-bullet active-bullet" data-show="commander"></div>
+              <div class="nav-bullet" data-show="specialist"></div>
+              <div class="nav-bullet" data-show="pilot"></div>
+              <div class="nav-bullet" data-show="engineer"></div>
+            </div>
+          </div>
+          <div class="crew-img">
+            <img src="./assets/crew/image-douglas-hurley.png" alt="" />
+          </div>
+        </div>
+        <div class="member specialist">
+          <div class="member-text">
+            <div class="member-text-inner">
+              <h5>MISSION SPECIALIST</h5>
+              <h3>MARK SHUTTLEWORTH</h3>
+              <p>
+                Mark Richard Shuttleworth is the founder and CEO of Canonical,
+                the company behind the Linux-based Ubuntu operating system.
+                Shuttleworth became the first South African to travel to space
+                as a space tourist.
+              </p>
+            </div>
+            <div class="crew-nav">
+              <div class="nav-bullet" data-show="commander"></div>
+              <div
+                class="nav-bullet active-bullet"
+                data-show="specialist"
+              ></div>
+              <div class="nav-bullet" data-show="pilot"></div>
+              <div class="nav-bullet" data-show="engineer"></div>
+            </div>
+          </div>
+          <div class="crew-img">
+            <img src="./assets/crew/image-mark-shuttleworth.png" alt="" />
+          </div>
+        </div>
+        <div class="member pilot">
+          <div class="member-text">
+            <div class="member-text-inner">
+              <h5>PILOT</h5>
+              <h3>VICTOR GLOVER</h3>
+              <p>
+                Pilot on the first operational flight of the SpaceX Crew Dragon
+                to the International Space Station. Glover is a commander in the
+                U.S. Navy where he pilots an F/A-18.He was a crew member of
+                Expedition 64, and served as a station systems flight engineer.
+              </p>
+            </div>
+            <div class="crew-nav">
+              <div class="nav-bullet" data-show="commander"></div>
+              <div class="nav-bullet" data-show="specialist"></div>
+              <div class="nav-bullet active-bullet" data-show="pilot"></div>
+              <div class="nav-bullet" data-show="engineer"></div>
+            </div>
+          </div>
+          <div class="crew-img">
+            <img src="./assets/crew/image-victor-glover.png" alt="" />
+          </div>
+        </div>
+        <div class="member engineer">
+          <div class="member-text">
+            <div class="member-text-inner">
+              <h5>FLIGHT ENGINEER</h5>
+              <h3>ANOUSHEH ANSARI</h3>
+              <p>
+                Anousheh Ansari is an Iranian American engineer and co-founder
+                of Prodea Systems. Ansari was the fourth self-funded space
+                tourist, the first self-funded woman to fly to the ISS, and the
+                first Iranian in space.
+              </p>
+            </div>
+            <div class="crew-nav">
+              <div class="nav-bullet" data-show="commander"></div>
+              <div class="nav-bullet" data-show="specialist"></div>
+              <div class="nav-bullet" data-show="pilot"></div>
+              <div class="nav-bullet active-bullet" data-show="engineer"></div>
+            </div>
+          </div>
+          <div class="crew-img">
+            <img src="./assets/crew/image-anousheh-ansari.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./app/js/script.js"></script>
+    <script src="./app/js/crew.js"></script>
+  </body>
+</html>

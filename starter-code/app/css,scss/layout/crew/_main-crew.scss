@@ -1,0 +1,156 @@
+.crew-main {
+  min-height: 100vh;
+  height: auto;
+  overflow: hidden;
+  padding: 6rem 0 1rem;
+  text-align: center;
+
+  .font-changed {
+    margin-bottom: 1rem;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    span {
+      color: $number-clr;
+      font-family: inherit;
+      font-weight: 900;
+    }
+  }
+}
+.crew-members {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.member {
+  display: none;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 1rem;
+
+  h5 {
+    letter-spacing: 2px;
+    color: rgb(150, 150, 150);
+    font-family: $mainFont;
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  .crew-img {
+    border-bottom: 1px solid $number-clr;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 70%;
+    }
+  }
+}
+
+.member-text {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}
+
+.commander {
+  display: flex;
+}
+
+.crew-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  .nav-bullet {
+    height: 4vw;
+    width: 4vw;
+    background: #fff;
+    opacity: 0.5;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: $t1;
+
+    &:not(.active-bullet):hover {
+      opacity: 0.7;
+    }
+  }
+  .active-bullet {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 500px) {
+  .crew-main {
+    padding: 6rem 0 0;
+  }
+  .crew-main .font-changed {
+    text-align: left;
+  }
+  .member {
+    flex-direction: column;
+
+    .crew-img {
+      border-bottom: none;
+      justify-content: center;
+      img {
+        width: 70%;
+      }
+    }
+  }
+  .member-text {
+    flex-direction: column;
+    flex: 1;
+  }
+  .crew-nav .nav-bullet {
+    height: 2vw;
+    width: 2vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .crew-main {
+    text-align: left;
+    height: 100vh;
+  }
+
+  .crew-members {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .member {
+    flex-direction: row;
+    h5 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 56px;
+    }
+
+    .crew-img {
+      justify-content: flex-end;
+      align-self: flex-end;
+      img {
+        width: 70%;
+      }
+    }
+  }
+  .member-text {
+    justify-content: space-between;
+  }
+  .crew-nav {
+    justify-content: flex-start;
+
+    .nav-bullet {
+      height: 1vw;
+      width: 1vw;
+    }
+  }
+}
