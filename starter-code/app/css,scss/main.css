@@ -284,8 +284,20 @@ main > img {
   }
 }
 
-.mobile-menu {
+.overlay {
+  background: rgba(0, 0, 0, 0.25);
+  height: 100vh;
+  width: 100vw;
   position: fixed;
+  z-index: 9999999;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-menu {
+  position: absolute;
   height: 100vh;
   width: 60%;
   background: rgba(255, 255, 255, 0.125);
@@ -294,7 +306,6 @@ main > img {
   right: -100%;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  z-index: 9999999;
   text-align: left;
 }
 
@@ -317,7 +328,7 @@ main > img {
   width: 100%;
   display: block;
   padding: 0.5rem 0 0.5rem 0.5rem;
-  border-right: 2px solid rgba(255, 255, 255, 0);
+  border-right: 4px solid rgba(255, 255, 255, 0);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -327,7 +338,7 @@ main > img {
 }
 
 .mobile-menu ul .active-mob-nav {
-  border-right: 2px solid white;
+  border-right: 4px solid white;
 }
 
 .home-content {
@@ -445,20 +456,27 @@ main > img {
   padding: 6rem 0 1rem;
 }
 
-.planets-flex {
-  text-align: center;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.planets-flex .font-changed, .planets-flex .planet-nav li, .planet-nav .planets-flex li {
+.dest-main > .font-changed, .planet-nav .dest-main > li {
   margin-bottom: 1rem;
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 6rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
 }
 
-.planets-flex .font-changed span, .planets-flex .planet-nav li span, .planet-nav .planets-flex li span {
+.dest-main > .font-changed span, .planet-nav .dest-main > li span {
   color: #464951;
   font-family: inherit;
   font-weight: 900;
+}
+
+.planets-flex {
+  text-align: center;
+  width: 80%;
+  margin: 3rem auto 0;
 }
 
 .planet-text {
@@ -563,7 +581,7 @@ main > img {
 }
 
 @media (min-width: 550px) {
-  .planets-flex > .font-changed, .planet-nav .planets-flex > li {
+  .dest-main > .font-changed, .planet-nav .dest-main > li {
     text-align: left;
   }
   .planet-info {
@@ -626,7 +644,7 @@ main > img {
   }
 }
 
-.crew-main {
+.crew-main, .tech-main {
   min-height: 100vh;
   height: auto;
   overflow: hidden;
@@ -634,7 +652,7 @@ main > img {
   text-align: center;
 }
 
-.crew-main .font-changed, .crew-main .planet-nav li, .planet-nav .crew-main li {
+.crew-main .font-changed, .tech-main .font-changed, .crew-main .planet-nav li, .planet-nav .crew-main li, .tech-main .planet-nav li, .planet-nav .tech-main li {
   margin-bottom: 1rem;
   width: 80%;
   position: absolute;
@@ -643,7 +661,7 @@ main > img {
           transform: translateX(-50%);
 }
 
-.crew-main .font-changed span, .crew-main .planet-nav li span, .planet-nav .crew-main li span {
+.crew-main .font-changed span, .tech-main .font-changed span, .crew-main .planet-nav li span, .planet-nav .crew-main li span, .tech-main .planet-nav li span, .planet-nav .tech-main li span {
   color: #464951;
   font-family: inherit;
   font-weight: 900;
@@ -740,10 +758,10 @@ main > img {
 }
 
 @media (min-width: 500px) {
-  .crew-main {
+  .crew-main, .tech-main {
     padding: 6rem 0 0;
   }
-  .crew-main .font-changed, .crew-main .planet-nav li, .planet-nav .crew-main li {
+  .crew-main .font-changed, .tech-main .font-changed, .crew-main .planet-nav li, .planet-nav .crew-main li, .tech-main .planet-nav li, .planet-nav .tech-main li {
     text-align: left;
   }
   .member {
@@ -777,7 +795,7 @@ main > img {
 }
 
 @media (min-width: 768px) {
-  .crew-main {
+  .crew-main, .tech-main {
     text-align: left;
     height: 100vh;
   }
@@ -823,6 +841,211 @@ main > img {
   .crew-nav .nav-bullet {
     height: 1vw;
     width: 1vw;
+  }
+}
+
+.tech-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tech-main .font-changed, .tech-main .planet-nav li, .planet-nav .tech-main li {
+  margin-bottom: 1rem;
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.tech-main .font-changed span, .tech-main .planet-nav li span, .planet-nav .tech-main li span {
+  color: #464951;
+  font-family: inherit;
+  font-weight: 900;
+}
+
+.port {
+  display: none;
+}
+
+.techs-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin: 3rem auto 0;
+}
+
+.tech {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.tech h5 {
+  color: #d0d6f9;
+  letter-spacing: 2px;
+}
+
+.tech h3 {
+  font-size: 2rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.tech .tech-text-container {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tech .tech-img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.tech .tech-img-container img {
+  width: 100%;
+}
+
+.tech-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tech-nav li {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  border: 1px solid #464951;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 3rem;
+  max-height: 3rem;
+}
+
+.tech-nav li:hover {
+  border-color: #fff;
+}
+
+.tech-nav .active-circle {
+  background: #fff;
+  color: #0b0d17;
+  border-color: #fff;
+}
+
+.capsule {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 500px) {
+  .crew-main, .tech-main {
+    padding: 6rem 0 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .techs-flex {
+    width: 90%;
+    margin: 3rem 0 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .port {
+    display: block;
+  }
+  .land {
+    display: none;
+  }
+  .tech {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2rem;
+  }
+  .tech h3 {
+    font-size: 56px;
+  }
+  .tech .tech-text-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    gap: 5vw;
+  }
+  .tech .tech-img-container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .tech .tech-img-container img {
+    width: 100%;
+  }
+  .tech-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

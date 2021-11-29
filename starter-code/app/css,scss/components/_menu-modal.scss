@@ -1,12 +1,22 @@
-.mobile-menu {
+.overlay {
+  background: rgba(0, 0, 0, 0.25);
+  height: 100vh;
+  width: 100vw;
   position: fixed;
+  z-index: 9999999;
+  transition: $t1;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-menu {
+  position: absolute;
   height: 100vh;
   width: 60%;
   background: rgba(255, 255, 255, 0.125);
   backdrop-filter: blur(5px);
   right: -100%;
   transition: $t1;
-  z-index: 9999999;
   text-align: left;
 
   ul {
@@ -23,7 +33,7 @@
         width: 100%;
         display: block;
         padding: 0.5rem 0 0.5rem 0.5rem;
-        border-right: 2px solid rgba(255, 255, 255, 0);
+        border-right: 4px solid rgba(255, 255, 255, 0);
         transition: $t1;
 
         &:not(.active-mob-nav) {
@@ -34,7 +44,7 @@
       }
     }
     .active-mob-nav {
-      border-right: 2px solid rgb(255, 255, 255);
+      border-right: 4px solid rgb(255, 255, 255);
     }
   }
 }

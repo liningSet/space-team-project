@@ -1,20 +1,201 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="stylesheet" href="./app/css,scss/main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/shared/logo.svg"
+    />
+    <link rel="stylesheet" href="./app/css,scss/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  
+    <title>Technology | Space Travel</title>
+  </head>
+  <body>
+    <main class="tech-main">
+      <img
+        src="./assets/technology/background-technology-mobile.jpg"
+        alt=""
+        class="mobile-bgimg"
+      />
+      <img
+        src="./assets/technology/background-technology-tablet.jpg"
+        alt=""
+        class="tablet-bgimg"
+      />
+      <img
+        src="./assets/technology/background-technology-desktop.jpg"
+        alt=""
+        class="desktop-bgimg"
+      />
 
-  <script src="./app/js,json/script.js"></script>
+      <div class="nav-container">
+        <div class="overlay">
+          <div class="mobile-menu">
+            <ul>
+              <li>
+                <a href="./index.html"><span>00</span> HOME</a>
+              </li>
+              <li>
+                <a href="./destination.html"><span>01</span> DESTINATION</a>
+              </li>
+              <li>
+                <a href="./crew.html"><span>02</span> CREW</a>
+              </li>
+              <li>
+                <a href="./technology.html" class="active-mob-nav"
+                  ><span>03</span> TECHNOLOGY</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav class="navbar">
+          <img src="./assets/shared/logo.svg" alt="logo" id="logo" />
+          <ul class="navlist">
+            <li class="nav-item">
+              <a href="./index.html"><span>00</span> HOME</a>
+            </li>
+            <li class="nav-item">
+              <a href="./destination.html"><span>01</span> DESTINATION</a>
+            </li>
+            <li class="nav-item">
+              <a href="./crew.html"><span>02</span> CREW</a>
+            </li>
+            <li class="nav-item">
+              <a href="./technology.html" class="active-nav"
+                ><span>03</span> TECHNOLOGY</a
+              >
+            </li>
+            <li class="nav-item burger-menu">
+              <img
+                src="./assets/shared/icon-hamburger.svg"
+                class="open"
+                alt=""
+              />
+              <img src="./assets/shared/icon-close.svg" class="close" alt="" />
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-</body>
+      <h4 class="font-changed"><span>03</span> SPACE LAUNCH 101</h4>
+      <div class="techs-flex">
+        <div class="tech capsule">
+          <div class="tech-text-container">
+            <ul class="tech-nav">
+              <li data-show="capsule" class="nav-circle active-circle">1</li>
+              <li data-show="launch-vehicle" class="nav-circle">2</li>
+              <li data-show="spaceport" class="nav-circle">3</li>
+            </ul>
+            <div class="tech-text">
+              <h5>THE TERMINOLOGY...</h5>
+              <h3>THE CAPSULE</h3>
+              <p>
+                A space capsule is an often-crewed spacecraft that uses a
+                blunt-body reentry capsule to reenter the Earth's atmosphere
+                without wings. Our capsule is where you'll spend your time
+                during the flight. It includes a space gym, cinema, and plenty
+                of other activities to keep you entertained.
+              </p>
+            </div>
+          </div>
+          <div class="tech-img-container">
+            <img
+              src="./assets/technology/image-space-capsule-portrait.jpg"
+              alt=""
+              class="port"
+            />
+            <img
+              src="./assets/technology/image-space-capsule-landscape.jpg"
+              alt=""
+              class="land"
+            />
+          </div>
+        </div>
+        <div class="tech launch-vehicle">
+          <div class="tech-text-container">
+            <ul class="tech-nav">
+              <li data-show="capsule" class="nav-circle">1</li>
+              <li data-show="launch-vehicle" class="nav-circle active-circle">
+                2
+              </li>
+              <li data-show="spaceport" class="nav-circle">3</li>
+            </ul>
+            <div class="tech-text">
+              <h5>THE TERMINOLOGY...</h5>
+              <h3>LAUNCH VEHICLE</h3>
+              <p>
+                A launch vehicle or carrier rocket is a rocket-propelled vehicle
+                used to carry a payload from Earth's surface to space, usually
+                to Earth orbit or beyond. Our WEB-X carrier rocket is the most
+                powerful in operation. Standing 150 metres tall, it's quite an
+                awe-inspiring sight on the launch pad!
+              </p>
+            </div>
+          </div>
+          <div class="tech-img-container">
+            <img
+              src="./assets/technology/image-launch-vehicle-portrait.jpg"
+              alt=""
+              class="port"
+            />
+            <img
+              src="./assets/technology/image-launch-vehicle-landscape.jpg"
+              alt=""
+              class="land"
+            />
+          </div>
+        </div>
+        <div class="tech spaceport">
+          <div class="tech-text-container">
+            <ul class="tech-nav">
+              <li data-show="capsule" class="nav-circle">1</li>
+              <li data-show="launch-vehicle" class="nav-circle">2</li>
+              <li data-show="spaceport" class="nav-circle active-circle">3</li>
+            </ul>
+            <div class="tech-text">
+              <h5>THE TERMINOLOGY...</h5>
+              <h3>SPACEPORT</h3>
+              <p>
+                A spaceport or cosmodrome is a site for launching (or receiving)
+                spacecraft, by analogy to the seaport for ships or airport for
+                aircraft. Based in the famous Cape Canaveral, our spaceport is
+                ideally situated to take advantage of the Earth’s rotation for
+                launch.
+              </p>
+            </div>
+          </div>
+          <div class="tech-img-container">
+            <img
+              src="./assets/technology/image-spaceport-portrait.jpg"
+              alt=""
+              class="port"
+            />
+            <img
+              src="./assets/technology/image-spaceport-landscape.jpg"
+              alt=""
+              class="land"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./app/js/script.js"></script>
+    <script src="./app/js/tech.js"></script>
+  </body>
 </html>

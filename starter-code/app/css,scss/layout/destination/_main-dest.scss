@@ -3,21 +3,28 @@
   height: auto;
   overflow: hidden;
   padding: 6rem 0 1rem;
-}
 
-.planets-flex {
-  text-align: center;
-  width: 80%;
-  margin: 0 auto;
-
-  .font-changed {
+  > .font-changed {
     margin-bottom: 1rem;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 6rem;
+    transform: translateX(-50%);
+    text-align: center;
+
     span {
       color: $number-clr;
       font-family: inherit;
       font-weight: 900;
     }
   }
+}
+
+.planets-flex {
+  text-align: center;
+  width: 80%;
+  margin: 3rem auto 0;
 }
 .planet-text {
   display: flex;
@@ -100,7 +107,7 @@
 }
 
 @media (min-width: 550px) {
-  .planets-flex {
+  .dest-main {
     > .font-changed {
       text-align: left;
     }
